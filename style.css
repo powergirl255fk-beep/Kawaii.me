@@ -1,0 +1,160 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh ;
+  background: #e8afcd;
+  width: 100%;
+}
+
+.container{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  padding: 40px;
+  border: 2px solid rgb(158, 158, 158);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0,0,0,0.1);
+}
+
+.login, .logo{
+  position:relative;
+  z-index: 1;
+}
+
+.login h2{
+  font-size: 2em;
+  color: #fff;
+
+}
+
+.login .inputBx input::placeholder{
+  color: #9ca3ab;
+}
+
+.button button:hover{
+  background-color:  rgb(255, 214, 221);
+}
+
+/*Estilo da imagem logo*/
+.logo {
+  width: 150px; 
+  margin-bottom: 20px; 
+  border-radius: 18px;
+  margin-bottom: 5px;
+}
+
+/* Estilo para o pseudo-elemento ::before do elemento com a classe container */
+.container::before { 
+  content: "";  /*cria um conteúdo vazio antes do conteúdo real do elemento*/
+  position: absolute; /*usamos para colocar esta camada exatamente no lugar certo dentro da nossa caixa */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; 
+  z-index: 0; 
+}
+
+
+
+.login {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  gap: 20px; /*coloca um espaço de 20 pixels entre cada item, para que eles não fiquem grudados um no outro.*/
+}
+
+
+
+.login .inputBx {
+  width: 100%; 
+}
+
+.login .inputBx label {
+  display: block;/*Os rótulos(label) irão se comportar como blocos de construção que se empilham*/
+  color: #9ca3ab;
+  margin-bottom: 5px; 
+}
+
+.login .inputBx input {
+  width: 100%;
+  padding: 12px 20px; 
+  background: linear-gradient(to bottom, #555, #000);
+  border: 2px solid #9ca3ab; 
+  border-radius: 10px; 
+  font-size: 1.2em; 
+  color: #fff; 
+}
+
+
+
+.button {
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button button {
+  width: 100%;
+  padding: 12px 20px;
+  background:#f8cae2;
+  border: none;
+  border-radius: 10px; 
+  font-size: 1.2em;
+  color: #000; 
+  font-weight: 900;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.social-icons i {
+  font-size: 2em; 
+  color: #9ca3ab; 
+  cursor: pointer; 
+  transition: color 0.3s ease; 
+}
+
+.social-icons i:hover {
+  color: #896bb6; 
+}
+
+.text-center {
+  text-align: center;
+  color: #9ca3ab; 
+}
+
+.text-center a {
+  color: #9ca3ab; 
+  text-decoration: none; 
+}
+
+.text-center a:hover {
+  text-decoration: underline; 
+}
+
+.social-login-text {
+  font-size: 0.8em; 
+  color: #9ca3ab; 
+}
+
